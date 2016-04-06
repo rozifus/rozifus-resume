@@ -2,6 +2,7 @@
 ## Full Stack Developer
 
 ### Resume
-[Web](https://rozifus.github.io/resume-ryan-miller/resume-ryan-miller-web.html) [PDF](https://rozifus.github.io/resume-ryan-miller/resume-ryan-miller.pdf)
+[Web](https://rozifus.github.io/rozifus-resume/resume-ryan-miller-web.html)
+[PDF](https://rozifus.github.io/rozifus-resume/resume-ryan-miller.pdf)
 
 
