@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Ryan Miller | Full Stack Developer</title>
+<style type="text/css">
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+p,
+pre {
+  margin: 1em 0;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+form {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body.pdf {
+  color: black;
+}
+body.pdf a {
+  text-decoration: none;
+  color: black;
+}
+body.pdf .container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  background: none;
+  border: none;
+  border-width: 8px 0 2px 0;
+  text-align: left;
+}
+body.pdf .resume {
+  position: relative;
+  padding: 40px 80px;
+}
+body.pdf a[href$='.pdf'] {
+  display: none;
+}
+body.pdf h1 {
+  letter-spacing: 0;
+  margin-top: 0;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+body.pdf h2 {
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: normal;
+}
+body.pdf h3 {
+  float: left;
+  width: 16%;
+  font-style: normal;
+}
+body.pdf h3+p {
+  float: left;
+  width: 78%;
+}
+body.pdf blockquote {
+  top: 40px;
+  right: 50px;
+  position: absolute;
+}
+body.pdf ul li {
+  width: 33%;
+  float: left;
+}
+body.pdf ul dl {
+  margin: 0;
+  padding: 0.3em 0 0;
+}
+body.pdf ul dl dt {
+  font-size: 122%;
+  font-weight: normal;
+  margin: 0 0 .75em;
+}
+body.pdf ul dl dd {
+  padding: 0 2em 0 0;
+}
+body.pdf ol {
+  float: left;
+  width: 79%;
+  margin: .7em 0 0;
+}
+body.pdf ol li {
+  width: 33%;
+  margin: 0;
+}
+body.pdf ol li:nth-child(3n) {
+  width: 34%;
+}
+body.pdf ol li:nth-child(1),
+body.pdf ol li:nth-child(2),
+body.pdf ol li:nth-child(3) {
+  border-top: none;
+}
+body.pdf dl {
+  margin: .7em 0 0;
+  page-break-inside: avoid !important;
+  display: block;
+  width: 79%;
+  float: left;
+}
+body.pdf dl strong {
+  float: right;
+  margin-top: -2em;
+}
+body.pdf dl em {
+  font-size: 130%;
+  font-style: normal;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+body {
+  font-family: 'Hoefler Text', Times New Roman, Times, serif;
+  color: #444;
+}
+h1,
+h2,
+h3,
+h4,
+ul dl dt {
+  font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
+}
+.container {
+  margin: 0 auto;
+  padding: 0;
+  background: whiteSmoke;
+  border: solid #666;
+  border-width: 8px 0 2px 0;
+  text-align: left;
+}
+.resume {
+  position: relative;
+  padding: 10px 20px;
+}
+a {
+  color: #990003;
+}
+a[href$='.pdf'] {
+  display: inline-block;
+  background: #666;
+  color: white;
+  padding: 6px 12px;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+blockquote {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4em;
+}
+hr {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 18px auto;
+  width: 100%;
+  clear: both;
+  border: none;
+  border-top: 1px solid #CCC;
+  font-size: 1px;
+  line-height: 0;
+  overflow: visible;
+  page-break-after: avoid;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  letter-spacing: -1px;
+  font-weight: normal;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: -1px;
+  font-weight: normal;
+}
+h3 {
+  margin: 0px 20px;
+  padding: 0 0 .5em;
+  font-size: 150%;
+  font-style: italic;
+  font-weight: normal;
+}
+h3+p {
+  margin: .6em 0 16px;
+  padding: 0;
+  display: block;
+  font-size: 104%;
+  line-height: 24px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+ul dl {
+  margin: .3em 0 0;
+  padding: 0;
+  width: 100%;
+}
+ul dl dt {
+  font-size: 100%;
+}
+ul dl dd {
+  margin: 0 0 1em;
+  padding: 0 2em 0 0;
+  font-size: .8em;
+  line-height: 1.5em;
+}
+ol {
+  margin: 0;
+  padding: 0 0 .75em;
+  width: 84%;
+  display: inline-block;
+}
+ol li {
+  margin: 0 0 0 1em;
+  padding: 0;
+  border-top: 1px solid #CCCCCC;
+  width: 100%;
+  float: left;
+  list-style: none;
+  line-height: 24px;
+  font-size: 14px;
+}
+ol li:nth-child(1) {
+  border-top: none;
+}
+dl {
+  display: inline-block;
+  width: 78%;
+  margin: 0;
+  padding: 0;
+}
+dl dt {
+  margin: 0;
+  padding: 0;
+  font-size: 140%;
+}
+dl dd {
+  margin: 0 0 1.5em;
+  padding: 0;
+  font-size: 80%;
+  line-height: 1.4em;
+}
+dl strong {
+  display: block;
+}
+dl em {
+  display: block;
+  font-size: 110%;
+  margin: .15em 0 .5em;
+  font-style: bold;
+}
+#footer {
+  display: none;
+}
+#footer + p {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media screen and (min-width: 37.5em) {
+  body {
+    padding: 2em 0;
+  }
+  blockquote {
+    top: 10px;
+    right: 50px;
+    position: absolute;
+  }
+  h1 {
+    margin-top: .5em;
+  }
+  ol {
+    margin: 0 0 0 1em;
+  }
+  ol li {
+    width: 50%;
+    margin: 0;
+  }
+  ol li:nth-child(1),
+  ol li:nth-child(2) {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 57em) {
+  .container {
+    width: 912px;
+  }
+  .resume {
+    position: relative;
+    padding: 40px 50px;
+  }
+  blockquote {
+    top: 40px;
+    right: 50px;
+    position: absolute;
+  }
+  h1 {
+    margin-top: 0;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: normal;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-weight: normal;
+  }
+  h3 {
+    float: left;
+    width: 16%;
+  }
+  h3+p {
+    float: left;
+    width: 78%;
+  }
+  ul li {
+    width: 33%;
+    float: left;
+  }
+  ul dl dt {
+    font-size: 122%;
+    font-weight: normal;
+    margin-bottom: .75em;
+  }
+  ul dl dd {
+    padding: 0 2em 0 0;
+  }
+  ol {
+    float: left;
+    width: 79%;
+    margin: .6em 0 0;
+  }
+  ol li {
+    width: 33%;
+    margin: 0;
+  }
+  ol li:nth-child(3n) {
+    width: 34%;
+  }
+  ol li:nth-child(1),
+  ol li:nth-child(2),
+  ol li:nth-child(3) {
+    border-top: none;
+  }
+  dl {
+    margin: .5em 0 0;
+  }
+  dl strong {
+    float: right;
+    margin-top: -2em;
+  }
+  dl em {
+    font-size: 130%;
+    font-style: normal;
+  }
+}
+
+</style>
+</head>
+
+<body class="">
+
+<div class="container">
+    <div class="resume">
+        <h1>Ryan Miller</h1>
+
+<h2>Full Stack Developer</h2>
+
+<h3><br /></h3>
+
+<blockquote>
+  <p><a href="http://rozifus.github.io/resume-ryanmiller/resume-ryan-miller.pdf">Download PDF</a><br />
+  rozifus@gmail.com<br />
+  <a href="https://www.github.com/rozifus">GitHub: rozifus</a> </br >
+  (+61) 0490 032 155 <br /></p>
+</blockquote>
+
+<hr />
+
+<h3 id="skills">Skills</h3>
+
+<ul>
+<li><dl>
+<dt>Autonomy</dt>
+<dd>Adept at seeking out and consuming knowledge in order to solve problems. Proactive self educator always learning new concepts and methods.</dd>
+</dl></li>
+<li><dl>
+<dt>Engineering</dt>
+<dd>Educated in building software systems. From analysis and design, through implementation and coding, to deployment and maintenance.</dd>
+</dl></li>
+<li><dl>
+<dt>Literacy</dt>
+<dd>Familiar with a diverse range of information technology paradigms, as well as having a solid grounding in mathematics and the natural sciences.</dd>
+</dl></li>
+</ul>
+
+<hr />
+
+<h3 id="technical">Core<br />Technical</h3>
+
+<ol>
+<li>JavaScript</li>
+<li>Python</li>
+<li>C#</li>
+<li>Swift</li>
+<li>Java</li>
+<li>Clojure</li>
+<li>Golang</li>
+<li>Unity3D</li>
+<li>Three.js</li>
+<li>React</li>
+<li>Flux / Reflux</li>
+<li>Reagent</li>
+<li>HTML</li>
+<li>CSS</li>
+<li>DOM</li>
+<li>SVG</li>
+<li>XML</li>
+<li>JSON</li>
+<li>Bootstrap</li>
+<li>Semantic UI</li>
+<li>Material UI</li>
+<li>OOP</li>
+<li>Functional</li>
+<li>Reactive</li>
+<li>Git</li>
+<li>Vim</li>
+<li>Bash</li>
+<li>Linux</li>
+<li>OSX</li>
+<li>Windows</li>
+</ol>
+
+<hr />
+
+<h3 id="Work">Work</h3>
+
+<dl>
+<dt>Mobile App Developer, Independent</dt>
+<dd>
+<p><strong>Nov 2015 - Current</strong></p>
+
+<p><em>Vismod (in development)</em> 
+Cryptography Algorithm Step-Solver and Visualizer<br />
+- JavaScript, React, SVG, HTML, CSS</p>
+
+<p><em>Lifey Widget (Native iOS)</em> 
+Approx. 40 downloads / day<br />
+<i>https://itunes.apple.com/au/app/lifey-widget-life-percent/id1070478026?mt=8</i><br />
+- Xcode, Swift<br /></p>
+
+<p><em>Lifey Widget (Native Android)</em> 
+<i>https://play.google.com/store/apps/details?id=com.rozifus.android.lifeywidget</i><br />
+- Android Studio, Java<br /></p>
+
+<p><em>Lifey Widget (Resources)</em> 
+Icons, Images, Provisioning, Marketing, etc<br />
+<i>https://www.facebook.com/lifeywidget/</i><br />
+<i>https://twitter.com/lifeywidget</i><br />
+- GIMP, iTunes Connect, Google Play Developer Console, Twitter Ads</p>
+
+<p><em>Lifey Widget (Unity3D Prototype)</em> 
+- Unity3D, C#, Python<br /></p>
+</dd>
+
+<dt>Mobile Game Developer, Independent</dt>
+<dd>
+<p><strong>Nov 2014 - Oct 2015</strong></p>
+
+<p><em>Game Prototypes</em> 
+WobbleRocket - 2D open-world rocket game<br />
+Rushie - Pipedream clone<br />
+Hopp - 3D runner game<br />
+Parachute - Parachute clone<br />
+Geeku - Sudoku variant around prime numbers<br />
+ShadyGames - Color matching game<br />
+- Unity3D, C#, VoxelShop</p>
+</dd>
+
+<dt>Front End Engineer, Ersatz Labs</dt>
+<dd>
+<p><strong>August 2014 - Nov 2014</strong></p>
+
+<p><em>Wordcloud t-SNE Tech Demo Updates</em>
+<i>http://rozifus.github.io/wordcloud/</i><br />
+- Three.js, jQuery, CSS</p>
+
+<p><em>Ersatz Integrated Data Projector for t-SNE Visualization</em>
+- Three.js, CoffeeScript, jQuery, React</p>
+
+<p><em>Misc. Ersatz Platform Work</em>
+- JavaScript, React, Python, Django, D3, SVG</p>
+</dd>
+
+<dt>Cryptocurrency Trading and <br /></dt>
+<dt>Web Development, Independent</dt>
+<dd>
+<p><strong>2013 - 2014</strong></p>
+
+<p><em>Bitcoin/Altcoin Trading</em>
+Buying, Selling, Research</p>
+
+<p><em>Filtercoin Scraper</em>
+Data Scraper and Builder<br />
+- Python (urllib, lxml)</p>
+
+<p><em>Filtercoin Website</em>
+Curated Filter Engine for Cryptocurrency Links<br />
+- JavaScript, jQuery, Handlebars</p>
+</dd>
+
+<dt>Mobile App Developer, Independent</dt>
+<dd>
+<p><strong>2012 - 2013</strong></p>
+
+<p><em>Worth My Time?</em>
+Generated approx 5 downloads per day<br />
+Released for iPhone / iPad / Android<br />
+- JavaScript, Sencha Touch, Cordova, Android SDK, XCode</p>
+
+<p><em>rozifus.com (2013)</em>
+- HTML, CSS, JavaScript, Jekyll, Github Pages, Twitter Bootstrap, Social Media Integration</p>
+
+<p><em>Easy Baby Logger</em>
+Released for Android<br />
+- JavaScript, Sencha Touch, Cordova, Android SDK</p>
+
+<p><em>rozifus.com (2012)</em>
+- HTML, CSS, JavaScript, Node.js, Express.js, Twitter Bootstrap</p>
+</dd>
+</dl>
+
+<hr />
+
+<h3 id="Education">Education</h3>
+
+<dl>
+<dt>Deakin University</dt>
+<dd>
+<p><strong>2009 - 2012</strong>
+<em>Bachelor of Information Technology</em>
+<em><i>Computer Science and Software Development</i></em>
+- Completed with Distinction
+<br />
+- HD Average (82.6)
+<br />
+- Team Leader for SIT301 &#8216;IT Practice&#8217; Unit</p>
+</dd>
+
+<dt>Coursera</dt>
+<dd>
+<p><strong>2013 - Current</strong>
+<em>An Introduction to Interactive Programming in Python</em>
+<em><i>Rice Univerity</i></em></p>
+
+<p><em>Bioinformatics</em>
+<em><i>University of California, San Diego</i></em></p>
+</dd>
+
+<dt>10Gen</dt>
+<dd>
+<p><em>MongoDB for Developers</em>
+<em><i>10Gen - The MongoDB Company</i></em></p>
+</dd>
+
+<dd>
+<p><em>MongoDB for Database Administrators</em>
+<em><i>10Gen - The MongoDB Company</i></em></p>
+</dd>
+</dl>
+
+<hr />
+
+<h3 id="coding-challenges">Side Projects</h3>
+
+<dl>
+<dt>Exploration</dt>
+<dd>
+<p><em>Imgboard Frontend</em>
+<i>https://github.com/rozifus/decent-chat-frontend-reagent</i><br />
+- ClojureScript, React, Reagent, Re-Frame, filereader.js, dropzone.js</p>
+
+<p><em>Arimaa Game Frontend</em>
+<i>https://github.com/rozifus/arimaa-react</i><br />
+- JavaScript, React, Flux, Semantic UI</p>
+</dd>
+
+<dt>Hackathons</dt>
+<dd>
+<p><em>TADHack 2016 Japan Mini</em>
+3D Chat - Team Entry<br />
+<i>https://www.youtube.com/watch?v=dXaQeSJG2jk</i><br />
+- JavaScript, WebRTC, Kinect, ROS, PCL, Ubuntu</p>
+
+<p><em>Github Game-Off 2012</em>
+Gitium Chromoblockatics<br />
+<i>https://github.com/rozifus/game-off-2012#gitium-chromoblockatics</i></p>
+
+<p><em>PyWeek</em>
+No. 17 - Python on Rails - Team Entry<br />
+<i>http://www.pyweek.org/e/NSteamstrong/</i></p>
+
+<p>No. 15 - Moon Pytrol - Team Entry<br />
+<i>http://www.pyweek.org/e/team-strong-/</i></p>
+
+<p>No. 12 - Schrodinger&#8217;s Cat - Team Entry<br />
+<i>http://www.pyweek.org/e/TeamStrong/</i></p>
+</dd>
+
+<dt>Coding Challenges</dt>
+<dd>
+<p><em>Project Euler</em>
+Python (Team)<br />
+<strong>52 Problems Solved</strong>
+Golang (Solo)<br />
+<strong>36 Problems Solved</strong>
+Clojure (Solo)<br />
+<strong>3 Problems Solved</strong></p>
+
+<p><em>4Clojure</em>
+Clojure (Solo)<br />
+<strong>63 Problems Solved</strong></p>
+
+<p><em>Sphere Project Online Judge</em>
+Golang (Solo)<br />
+<strong>4 Problems Solved</strong></p>
+</dd>
+</dl>
+
+<hr />
+
+<h3 id="Hobbies">Hobbies</h3>
+
+<ol>
+<li>Time with Friends</li>
+<li>Gym Classes</li>
+<li>Salsa Dancing</li>
+<li>Learning Spanish</li>
+<li>Sci-Fi</li>
+<li>Guitar</li>
+<li>Chiptunes + Retrowave </li>
+<li>Veggie Patch </li>
+<li>Philosophy</li>
+</ol>
+
+<hr />
+
+<h3 id="footer">Footer</h3>
+
+<p>Ryan Miller &#8212; <a href="rozifus@gmail.com">rozifus@gmail.com</a> &#8212; (+61) 0490 032 155</p>
+
+<hr />
+
+    </div>
+</div>
+
+</body>
+</html>
