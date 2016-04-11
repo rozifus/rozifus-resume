@@ -6,7 +6,7 @@
 
 [[iTunes](https://itunes.apple.com/au/app/lifey-widget-life-percent/id1070478026?mt=8)] [[Google Play](https://play.google.com/store/apps/details?id=com.rozifus.android.lifeywidget&hl=en)]
 
----
+## &nbsp;
 
 ### 3D Wordcloud for t-SNE Visualization
 
@@ -14,7 +14,7 @@
 
 [[Demo](http://rozifus.github.io/wordcloud)] [[Source](https://github.com/rozifus/wordcloud)]
 
----
+## &nbsp;
 
 ### Github Game-Off 2012 "Gitium Chromoblockatics"
 
@@ -22,4 +22,3 @@
 
 [[Demo](http://rozifus.github.io/game-off-2012/simple.html)] [[Source](https://github.com/rozifus/game-off-2012)]
 
----
