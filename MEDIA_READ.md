@@ -1,8 +1,10 @@
-# Media Comsumption - Ryan Miller
+# Media Read - Ryan Miller
 
 ## 2016
 
 ### April
+
+[Understand JavaScript "this" With Clarity and Master It - Richard Bovell](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/)
 
 [9 things every React.js beginner should know - Cam Jackson](https://camjackson.net/post/9-things-every-reactjs-beginner-should-know)
 
@@ -12,6 +14,4 @@
 
 [Why I Left Gulp and Grunt for NPM Scripts - Cory House](https://medium.freecodecamp.com/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.7pilmnscl)
 
-[The Twelve-Factor App](http://12factor.net)
-
-[Ideas about a new programming language for games - Jonathan Blow](https://www.youtube.com/watch?v=TH9VCN6UkyQ)
+[The Twelve-Factor App - Adam Wiggins](http://12factor.net)
