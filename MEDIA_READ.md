@@ -4,6 +4,8 @@
 
 ### April
 
+[Thinking in React - Facebook](https://facebook.github.io/react/docs/thinking-in-react.html)
+
 [Understand JavaScript "this" With Clarity and Master It - Richard Bovell](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/)
 
 [9 things every React.js beginner should know - Cam Jackson](https://camjackson.net/post/9-things-every-reactjs-beginner-should-know)
